@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bastien & Fils – Réparation Mac – Antony 92160 (version rose)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --rose: #ec4899;
+      --rose-dark: #be185d;
+      --rose-deep: #9d174d;
+      --rose-light: #fdf2f8;
+      --rose-soft: #f9a8d4;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fff7fb;
+      color: #111827;
+    }
+
+    /* ===================== HEADER ===================== */
+
+    .main-header {
+      background: #ffffff;
+      border-bottom: 2px solid var(--rose);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .header-logo {
+      width: 110px;
+      height: 60px;
+      border-radius: 10px;
+      border: 3px solid var(--rose-deep);
+      background: radial-gradient(circle at center, var(--rose-soft), var(--rose-deep));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #f9fafb;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2.3rem;
+      font-size: 1rem;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+      text-decoration: underline;
+    }
+
+    .call-btn {
+      background: var(--rose);
+      color: #ffffff;
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: 0.2s;
+      border: 2px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .call-btn:hover {
+      background: var(--rose-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 900px) {
+      .nav-menu {
+        gap: 1.4rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-menu {
+        display: none;
+      }
+
+      .call-btn {
+        padding: 10px 18px;
+      }
+    }
+
+    /* ===================== HERO ===================== */
+
+    .hero {
+      max-width: 1250px;
+      margin: 40px auto 0;
+      padding: 60px 20px 80px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(244, 114, 182, 0.18);
+    }
+
+    .hero-eyebrow {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--rose);
+      letter-spacing: 0.07em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: #374151;
+      margin-bottom: 25px;
+      max-width: 460px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tag {
+      color: var(--rose);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      padding: 14px 26px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s ease;
+      border: 2px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--rose);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--rose-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--rose);
+      border-color: var(--rose);
+    }
+
+    .btn-outline:hover {
+      background: var(--rose-light);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: #6b7280;
+      max-width: 400px;
+    }
+
+    .hero-images {
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      grid-template-rows: 250px 250px;
+      gap: 20px;
+    }
+
+    .hero-big,
+    .hero-small {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-big {
+      grid-row: span 2;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+    }
+
+    .hero-small {
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-label {
+      position: absolute;
+      bottom: 12px;
+      left: 16px;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 14px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    }
+
+    @media (max-width: 1050px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hero-images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+      }
+      .hero-title {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .hero {
+        gap: 30px;
+      }
+      .hero-images {
+        grid-template-columns: 1fr;
+        grid-template-rows: 220px 160px 160px;
+      }
+      .hero-big {
+        grid-row: auto;
+      }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* ===================== PÉPINS MAC (CARDS) ===================== */
+
+    .section-wrapper {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section-wrapper h2 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 35px;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    a.card {
+      display: block;
+      background: #ffffff;
+      padding: 35px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.2s ease;
+      cursor: pointer;
+      text-decoration: none;
+      border-top: 4px solid var(--rose);
+    }
+
+    a.card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .card-emoji {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--rose);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+      line-height: 1.4;
+    }
+
+    /* ===================== CONTACT + PROMOS ===================== */
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 16px 80px;
+    }
+
+    .contact-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .contact-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(244, 114, 182, 0.18);
+    }
+
+    .contact-icon {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--rose);
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .contact-text {
+      font-size: 14px;
+      line-height: 1.4;
+      color: #1f2933;
+    }
+
+    .contact-link {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--rose);
+      text-decoration: none;
+    }
+
+    .contact-link:hover {
+      text-decoration: underline;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      margin: 20px 0 32px;
+    }
+
+    .promo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .promo-card {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      min-height: 180px;
+      box-shadow: 0 6px 16px rgba(190, 24, 93, 0.4);
+      background: linear-gradient(120deg, var(--rose-deep), var(--rose-soft));
+      color: #ffffff;
+      display: flex;
+    }
+
+    .promo-visual {
+      flex: 0 0 45%;
+      background: radial-gradient(circle at center, var(--rose-soft), var(--rose-deep));
+    }
+
+    .promo-visual--robot {
+      background: radial-gradient(circle at center, #f472b6, var(--rose-deep));
+    }
+
+    .promo-visual--bike {
+      background: radial-gradient(circle at center, #fb7185, #9f1239);
+    }
+
+    .promo-content {
+      flex: 1;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promo-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+    }
+
+    .promo-subtitle {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .promo-link {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffe4f1;
+      text-decoration: none;
+    }
+
+    .promo-link:hover {
+      text-decoration: underline;
+    }
+
+    .promo-card--textonly {
+      background: linear-gradient(120deg, #fdf2f8, var(--rose));
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promo-title--purple {
+      color: #4a044e;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .promo-subtitle--large {
+      font-size: 15px;
+      margin-top: 8px;
+      line-height: 1.5;
+      color: #4a044e;
+    }
+
+    @media (max-width: 900px) {
+      .contact-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .promo-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .contact-strip {
+        grid-template-columns: 1fr;
+      }
+      .promo-card {
+        flex-direction: column;
+      }
+      .promo-visual {
+        flex-basis: 120px;
+      }
+    }
+
+    /* ===================== AVIS + ADRESSES ===================== */
+
+    .reviews-section {
+      display: flex;
+      gap: 32px;
+      align-items: stretch;
+      margin-bottom: 40px;
+    }
+
+    .business-card {
+      width: 320px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 24px 20px;
+      box-shadow: 0 8px 20px rgba(236, 72, 153, 0.35);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .business-top {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .business-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      border: 2px solid var(--rose-deep);
+      background: radial-gradient(circle at center, var(--rose-soft), var(--rose-deep));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fefefe;
+      font-size: 11px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .business-name {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .business-rating {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stars {
+      color: #facc15;
+      font-size: 16px;
+    }
+
+    .business-count {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .business-link {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .business-button {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--rose-deep);
+      background: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.15s ease;
+      text-decoration: none;
+      color: var(--rose-deep);
+    }
+
+    .business-button:hover {
+      background: var(--rose-deep);
+      color: #ffffff;
+    }
+
+    .reviews-wrapper {
+      flex: 1;
+      position: relative;
+    }
+
+    .reviews-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+      padding-top: 4px;
+    }
+
+    .review-card {
+      flex: 0 0 330px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 18px 20px 22px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      position: relative;
+    }
+
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .review-user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--rose);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .user-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .review-date {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .google-badge {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #4285f4;
+    }
+
+    .review-stars {
+      color: #facc15;
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .review-text {
+      font-size: 13px;
+      color: #111827;
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .review-read-more {
+      font-size: 13px;
+      color: var(--rose-deep);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .review-read-more:hover {
+      text-decoration: underline;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+    }
+
+    .nav-arrow-left {
+      left: -18px;
+    }
+
+    .nav-arrow-right {
+      right: -18px;
+    }
+
+    .nav-arrow span {
+      font-size: 18px;
+    }
+
+    .reviews-track::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .reviews-track::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .reviews-track::-webkit-scrollbar-thumb {
+      background: #d1d5db;
+      border-radius: 999px;
+    }
+
+    .locations-section {
+      margin-top: 20px;
+    }
+
+    .locations-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .location-card {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      min-height: 180px;
+      box-shadow: 0 6px 16px rgba(236, 72, 153, 0.45);
+      background: linear-gradient(120deg, #9d174d, #f472b6);
+      color: #ffffff;
+      display: flex;
+    }
+
+    .location-photo {
+      flex: 0 0 40%;
+      background: radial-gradient(circle at center, var(--rose-soft), var(--rose-deep));
+    }
+
+    .location-content {
+      flex: 1;
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .location-text {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .location-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: #fee2f5;
+      text-decoration: none;
+      margin-top: 4px;
+    }
+
+    .location-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1024px) {
+      .reviews-section {
+        flex-direction: column;
+      }
+
+      .business-card {
+        width: 100%;
+        max-width: 360px;
+      }
+
+      .nav-arrow-left {
+        left: 6px;
+      }
+      .nav-arrow-right {
+        right: 6px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .location-card {
+        flex-direction: column;
+      }
+
+      .location-photo {
+        flex-basis: 120px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .review-card {
+        flex: 0 0 85%;
+      }
+    }
+
+    /* ===================== FOOTER ===================== */
+
+    .site-footer {
+      background: #fff7fb;
+      border-top: 1px solid #f9c5df;
+      padding: 40px 16px 30px;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.2fr 1.2fr 1.2fr;
+      gap: 40px;
+      align-items: flex-start;
+      justify-items: center;
+      margin-bottom: 24px;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo {
+      width: 110px;
+      height: 70px;
+      border-radius: 12px;
+      border: 3px solid var(--rose-deep);
+      background: radial-gradient(circle at center, var(--rose-soft), var(--rose-deep));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+      font-size: 11px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .footer-brand-name {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+      font-size: 16px;
+    }
+
+    .footer-socials a {
+      text-decoration: none;
+      color: #111827;
+    }
+
+    .footer-socials a:hover {
+      color: var(--rose);
+    }
+
+    .footer-column-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--rose);
+    }
+
+    .footer-links {
+      list-style: none;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #111827;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+      .footer-links {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="main-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <div class="header-logo">
+          BASTIEN<br>& FILS
+        </div>
+        <nav class="nav-menu">
+          <a href="#reparer">Réparer</a>
+          <a href="#macbook">MacBook</a>
+          <a href="#imac">iMac</a>
+          <a href="#macmini">Mac mini</a>
+          <a href="#diagnostic">Diagnostic</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <a href="tel:0187667298" class="call-btn">
+        01 87 66 72 98
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="reparer">
+      <div>
+        <div class="hero-eyebrow">
+          BASTIEN & FILS – RÉPARATION MAC – ANTONY 92160
+        </div>
+
+        <h1 class="hero-title">
+          Réparation MacBook, iMac & Mac mini<br>Antony – Spécialiste Apple
+        </h1>
+
+        <p class="hero-subtitle">
+          Atelier Apple indépendant situé à Antony, au 2 Rue Pernoud.
+          Diagnostic rapide, devis clair et réparations garanties.
+          MacBook, iMac et Mac mini – expertise dédiée aux utilisateurs Mac des Hauts-de-Seine.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag">#RéparationMac</span>
+          <span class="tag">#Antony92160</span>
+          <span class="tag">#DiagnosticGratuit</span>
+          <span class="tag">#ExpertApple</span>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="tel:0187667298" class="btn btn-primary">01 87 66 72 98</a>
+          <a href="https://share.google/RUe82ZaoQV6aUq1ur" target="_blank" class="btn btn-outline">Voir la fiche Google</a>
+        </div>
+
+        <p class="hero-note">
+          Atelier situé au <strong>2 Rue Pernoud, 92160 Antony</strong>.
+          Dépôt immédiat ou réparation express selon disponibilité.
+        </p>
+      </div>
+
+      <div class="hero-images">
+        <div class="hero-big" id="imac">
+          <img class="hero-img" src="https://cdn.prod.website-files.com/693365857b0d70a9a9a1c95a/69336b0881823edfadff03ee_repair_04.png" alt="Réparation iMac">
+          <div class="hero-label">Réparation iMac – écran, démarrage, lenteurs…</div>
+        </div>
+
+        <div class="hero-small" id="macbook">
+          <img class="hero-img" src="https://cdn.prod.website-files.com/693365857b0d70a9a9a1c95a/69336b0534065f157c207c07_repair_03.png" alt="Réparation MacBook">
+          <div class="hero-label">MacBook & MacBook Pro</div>
+        </div>
+
+        <div class="hero-small" id="macmini">
+          <img class="hero-img" src="https://cdn.prod.website-files.com/693365857b0d70a9a9a1c95a/69336b1e30f4ff1b5435b347_repair_06.png" alt="Réparation Mac mini">
+          <div class="hero-label">Mac mini & configurations</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PÉPINS MAC ===================== -->
+    <section class="section-wrapper" id="reparation-mac">
+      <h2>Quel est votre pépin aujourd'hui ?</h2>
+
+      <div class="cards-grid">
+        <a href="tel:0187667298" class="card">
+          <div class="card-emoji">PANNE</div>
+          <div class="card-title">Mon Mac ne<br>démarre plus</div>
+        </a>
+
+        <a href="tel:0187667298" class="card" id="ecran">
+          <div class="card-emoji">ÉCRAN</div>
+          <div class="card-title">Écran Mac<br>cassé ou fissuré</div>
+        </a>
+
+        <a href="tel:0187667298" class="card">
+          <div class="card-emoji">LENTEUR</div>
+          <div class="card-title">Mon Mac est<br>trop lent</div>
+        </a>
+
+        <a href="tel:0187667298" class="card">
+          <div class="card-emoji">LIQUIDE</div>
+          <div class="card-title">Liquide renversé<br>sur Mac</div>
+        </a>
+
+        <a href="tel:0187667298" class="card" id="batterie">
+          <div class="card-emoji">BATTERIE</div>
+          <div class="card-title">Batterie Mac<br>à remplacer</div>
+        </a>
+
+        <a href="tel:0187667298" class="card" id="donnees">
+          <div class="card-emoji">DONNÉES</div>
+          <div class="card-title">Récupération<br>de données</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT + PROMOS ===================== -->
+    <section class="page" id="contact">
+      <div class="contact-strip">
+
+        <div class="contact-card">
+          <div class="contact-icon">TÉLÉPHONE</div>
+          <div class="contact-text">
+            Bastien & Fils – Réparation Mac<br>à Antony (92160)
+          </div>
+          <a href="tel:0187667298" class="contact-link">01 87 66 72 98</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">EMAIL</div>
+          <div class="contact-text">
+            Contact par mail<br>(réponse rapide)
+          </div>
+          <a href="mailto:contact@bastien-mac.fr" class="contact-link">Envoyer un mail</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">ADRESSE</div>
+          <div class="contact-text">
+            Atelier au cœur d’Antony<br />
+            Hauts-de-Seine (92)
+          </div>
+          <a href="https://maps.google.com/?q=2 Rue Pernoud, 92160 Antony"
+             class="contact-link"
+             target="_blank">
+            2 Rue Pernoud
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon">ENVOI</div>
+          <div class="contact-text">
+            Envoi d’appareil<br />
+            depuis toute la France
+          </div>
+          <a href="#diagnostic" class="contact-link">Diagnostic offert</a>
+        </div>
+
+      </div>
+
+      <h2 class="section-title">
+        Avec votre Mac, fini les pépins.
+      </h2>
+
+      <div class="promo-grid">
+
+        <div class="promo-card">
+          <div class="promo-visual promo-visual--robot"></div>
+          <div class="promo-content">
+            <div class="promo-title">Le blog de l’atelier</div>
+            <div class="promo-subtitle">
+              Astuces, conseils et bonnes pratiques<br>
+              pour prolonger la vie de votre Mac.
+            </div>
+            <a href="#blog" class="promo-link">Découvrir</a>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <div class="promo-visual promo-visual--bike"></div>
+          <div class="promo-content">
+            <div class="promo-title">Intervention locale</div>
+            <div class="promo-subtitle">
+              Dépannage rapide à domicile<br>
+              sur Antony et les environs.
+            </div>
+            <a href="tel:0187667298" class="promo-link">Appeler</a>
+          </div>
+        </div>
+
+        <div class="promo-card promo-card--textonly" id="diagnostic">
+          <div class="promo-title promo-title--purple">DEVIS GRATUIT</div>
+          <div class="promo-subtitle promo-subtitle--large">
+            Diagnostic complet de votre Mac<br>
+            avant toute réparation.
+          </div>
+          <a href="tel:0187667298" class="promo-link">Obtenir un devis</a>
+        </div>
+
+        <div class="promo-card promo-card--textonly">
+          <div class="promo-title promo-title--purple">ENVOI NATIONAL</div>
+          <div class="promo-subtitle promo-subtitle--large">
+            Vous n’êtes pas à Antony ?<br>
+            Envoi possible depuis toute la France.
+          </div>
+          <a href="#france" class="promo-link">En savoir plus</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== AVIS & ADRESSES ===================== -->
+    <section class="page">
+      <section class="reviews-section">
+
+        <div class="business-card">
+          <div class="business-top">
+            <div class="business-logo">
+              BASTIEN<br>& FILS<br>MAC
+            </div>
+            <div>
+              <div class="business-name">Bastien & Fils – Réparation Mac</div>
+              <div class="business-rating">
+                <span class="stars">★★★★☆</span>
+                <span>4,9/5</span>
+              </div>
+              <div class="business-count">+ de 120 avis Google</div>
+            </div>
+          </div>
+
+          <div class="business-link">
+            2 Rue Pernoud, 92160 Antony<br />
+            Tél : 01 87 66 72 98
+          </div>
+
+          <a
+            href="https://share.google/RUe82ZaoQV6aUq1ur"
+            target="_blank"
+            class="business-button"
+          >
+            Voir ou écrire un avis
+          </a>
+        </div>
+
+        <div class="reviews-wrapper">
+          <h2 class="reviews-title">Ce que disent nos clients</h2>
+
+          <div class="nav-arrow nav-arrow-left" id="arrowLeft">
+            <span>‹</span>
+          </div>
+          <div class="nav-arrow nav-arrow-right" id="arrowRight">
+            <span>›</span>
+          </div>
+
+          <div class="reviews-track" id="reviewsTrack">
+            <article class="review-card">
+              <header class="review-header">
+                <div class="review-user">
+                  <div class="avatar">L</div>
+                  <div>
+                    <div class="user-name">Laura B.</div>
+                    <div class="review-date">il y a 2 mois</div>
+                  </div>
+                </div>
+                <div class="google-badge">G</div>
+              </header>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                MacBook Pro réparé en une journée, avec explications claires et
+                un devis respecté. Service sérieux, je recommande vivement.
+              </p>
+              <a href="#" class="review-read-more">Lire la suite</a>
+            </article>
+
+            <article class="review-card">
+              <header class="review-header">
+                <div class="review-user">
+                  <div class="avatar">M</div>
+                  <div>
+                    <div class="user-name">Marc D.</div>
+                    <div class="review-date">il y a 4 mois</div>
+                  </div>
+                </div>
+                <div class="google-badge">G</div>
+              </header>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                Mon iMac ne démarrait plus, diagnostic rapide et solution trouvée
+                sans pousser à l’achat de matériel. Excellent atelier à Antony.
+              </p>
+              <a href="#" class="review-read-more">Lire la suite</a>
+            </article>
+
+            <article class="review-card">
+              <header class="review-header">
+                <div class="review-user">
+                  <div class="avatar">S</div>
+                  <div>
+                    <div class="user-name">Sophie R.</div>
+                    <div class="review-date">il y a 6 mois</div>
+                  </div>
+                </div>
+                <div class="google-badge">G</div>
+              </header>
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text">
+                Accueil chaleureux, explications pédagogiques et prix honnêtes.
+                Mon Mac a retrouvé une seconde jeunesse.
+              </p>
+              <a href="#" class="review-read-more">Lire la suite</a>
+            </article>
+
+            <article class="review-card">
+              <header class="review-header">
+                <div class="review-user">
+                  <div class="avatar">T</div>
+                  <div>
+                    <div class="user-name">Thomas G.</div>
+                    <div class="review-date">il y a 8 mois</div>
+                  </div>
+                </div>
+                <div class="google-badge">G</div>
+              </header>
+              <div class="review-stars">★★★★☆</div>
+              <p class="review-text">
+                Intervention à domicile à Antony, très pratique.
+                Légère attente sur les pièces mais résultat impeccable.
+              </p>
+              <a href="#" class="review-read-more">Lire la suite</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="locations-section">
+        <h2 class="locations-title">Où nous trouver ?</h2>
+
+        <div class="location-grid">
+          <div class="location-card">
+            <div class="location-photo"></div>
+            <div class="location-content">
+              <div class="location-title">
+                Bastien & Fils – Réparation Mac<br />
+                2 Rue Pernoud<br />
+                92160 Antony
+              </div>
+              <div class="location-text">
+                Atelier situé à Antony, facilement accessible depuis le centre-ville et la gare RER.<br />
+                Du lundi au vendredi : 9h30 – 19h<br />
+                Samedi sur rendez-vous, fermé le dimanche.
+              </div>
+              <a
+                href="https://maps.google.com/?q=2 Rue Pernoud, 92160 Antony"
+                target="_blank"
+                class="location-link"
+              >
+                Voir sur la carte
+              </a>
+            </div>
+          </div>
+
+          <div class="location-card">
+            <div class="location-photo"></div>
+            <div class="location-content">
+              <div class="location-title">
+                Intervention à domicile<br />
+                Antony & alentours
+              </div>
+              <div class="location-text">
+                Déplacement possible à Antony et dans les villes voisines
+                (Massy, Sceaux, Châtenay-Malabry, Fresnes…) pour les pannes urgentes
+                sur MacBook, iMac et Mac mini.
+              </div>
+              <a href="tel:0187667298" class="location-link">
+                Appeler le 01 87 66 72 98
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+        
+        <!-- Logo + infos -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            BASTIEN<br>& FILS<br>MAC
+          </div>
+          <div class="footer-brand-name">Bastien & Fils – Réparation Mac</div>
+          <div style="font-size:12px;color:#6b7280;">
+            2 Rue Pernoud, 92160 Antony<br>
+            Tél : 01 87 66 72 98
+          </div>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">o</a>
+            <a href="#" aria-label="Twitter">x</a>
+          </div>
+        </div>
+
+        <!-- Catégories -->
+        <div>
+          <div class="footer-column-title">Catégories</div>
+          <ul class="footer-links">
+            <li><a href="#reparation-mac">Réparation Mac</a></li>
+            <li><a href="#macbook">Réparation MacBook</a></li>
+            <li><a href="#imac">Réparation iMac</a></li>
+            <li><a href="#ecran">Remplacement écran Mac</a></li>
+            <li><a href="#batterie">Changement batterie Mac</a></li>
+            <li><a href="#donnees">Récupération de données</a></li>
+          </ul>
+        </div>
+
+        <!-- Légal -->
+        <div>
+          <div class="footer-column-title">À propos</div>
+          <ul class="footer-links">
+            <li><a href="#qui-sommes-nous">Qui sommes-nous ?</a></li>
+            <li><a href="#contact">Nous contacter</a></li>
+            <li><a href="#infos-livraison">Informations de prise en charge</a></li>
+            <li><a href="#mentions">Mentions légales</a></li>
+            <li><a href="#cgv">CGV</a></li>
+            <li><a href="#confidentialite">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="year"></span> Bastien & Fils – Réparation Mac – Antony 92160. Tous droits réservés.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const track = document.getElementById("reviewsTrack");
+    const arrowLeft = document.getElementById("arrowLeft");
+    const arrowRight = document.getElementById("arrowRight");
+
+    arrowLeft.addEventListener("click", () => {
+      track.scrollBy({ left: -340, behavior: "smooth" });
+    });
+
+    arrowRight.addEventListener("click", () => {
+      track.scrollBy({ left: 340, behavior: "smooth" });
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
